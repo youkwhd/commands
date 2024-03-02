@@ -4,3 +4,8 @@ commands
 **ON HOLD, ZIG IS YET PRODUCTION READY**
 
 Lists all available commands
+
+Quick Start
+-----------
+
+    zig build && ./zig-out/bin/commands
