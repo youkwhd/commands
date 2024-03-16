@@ -4,12 +4,11 @@ const c = @cImport({
 });
 
 const std = @import("std");
+const FILEPATH_MAX_LEN = 1024;
 
 pub fn main() !void {
     const allocator = std.heap.page_allocator;
     const stdout = std.io.getStdOut().writer();
-
-    var FILEPATH_MAX_LEN = 1024;
 
     var pathEnv = try std.process.getEnvVarOwned(allocator, "PATH");
     defer allocator.free(pathEnv);
